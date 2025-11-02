@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CT-Global Modular Solutions - Building Tomorrow's Communities</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-blue': '#0a2a4b', // Deep corporate blue
+                        'brand-dark': '#1a1a1a', // Dark charcoal
+                        'brand-accent': '#00a99d', // A modern teal/green for accents
+                        'brand-gray': '#f4f7f6', // Light gray background
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Hero Video Background */
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .hero-video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 42, 75, 0.7); /* Dark blue overlay */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-brand-dark">
+
+    <header class="bg-white/90 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-brand-blue">
+                    CT-Global<span class="text-brand-accent">.</span>
+                </a>
+                
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <ul class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <li><a href="#mission" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Our Mission</a></li>
+                    <li><a href="#solution" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Our Solution</a></li>
+                    <li><a href="#market" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">The Market</a></li>
+                    <li><a href="#process" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Our Process</a></li>
+                    <li><a href="#partner" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Partnerships</a></li>
+                    <li>
+                        <a href="#contact" class="bg-brand-accent text-white px-5 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all duration-300 shadow-md">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <ul class="flex flex-col space-y-2">
+                    <li><a href="#mission" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Our Mission</a></li>
+                    <li><a href="#solution" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Our Solution</a></li>
+                    <li><a href="#market" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">The Market</a></li>
+                    <li><a href="#process" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Our Process</a></li>
+                    <li><a href="#partner" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Partnerships</a></li>
+                    <li>
+                        <a href="#contact" class="mobile-nav-link block py-2 px-3 rounded-md bg-brand-accent text-white font-medium hover:bg-opacity-90 transition-all duration-300 shadow-md">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="hero" class="relative h-screen min-h-[600px] flex items-center justify-center text-center text-white">
+            <div class="hero-video-container">
+                <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Modern modular community" class="hero-video" 
+                     onerror="this.src='https://placehold.co/1920x1080/0a2a4b/ffffff?text=Modern+Community'; this.onerror=null;">
+                <video autoplay loop muted playsinline class="hero-video" poster="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-drone-shot-of-a-valle-and-a-village-5008-large.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content container mx-auto px-6">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+                    Building Tomorrow's Communities, Today.
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-gray-200">
+                    We provide turnkey, affordable smart communities for a rapidly urbanizing world. By integrating cost-effective modular housing with advanced technology, we are solving the global housing deficit one community at a time.
+                </p>
+                <a href="#solution" class="bg-brand-accent text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg transform hover:scale-105">
+                    Discover Our Solution
+                </a>
+            </div>
+        </section>
+
+        <section id="mission" class="py-20 md:py-32 bg-brand-gray">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-blue mb-6">
+                    From a Vision to a Village
+                </h2>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    [cite_start]The "CT-China Town" concept was born from a fundamental desire to address critical housing shortages in rural and underserved areas[cite: 3618]. [cite_start]We realized that solving this crisis required a new system of mass-produced, modular building components that could be deployed rapidly and efficiently[cite: 3618].
+                </p>
+                <p class="text-lg text-gray-700 mb-12 leading-relaxed">
+                    [cite_start]This "Lego-like" building strategy is the innovative philosophy that drives our project management and logistics[cite: 3619]. [cite_start]It allows us to establish entire foundations for new towns where housing is unavailable, building not just homes, but the very framework for a sustainable future[cite: 414, 4005].
+                </p>
+                
+                <div class="bg-white p-8 rounded-lg shadow-xl border-l-4 border-brand-accent text-left">
+                    <blockquote class="text-xl md:text-2xl italic text-gray-800 leading-relaxed">
+                        [cite_start]"The ChinaTown (CT) initiative aims to address housing shortages in rural areas by mass-producing modular building components. These components, akin to Lego pieces, will facilitate the rapid construction of houses and towns..." [cite: 3618, 3619]
+                        [cite_start]<cite class="block text-right not-italic text-lg text-gray-600 mt-4">— Memoirs from the Psych Ward (Page 275) [cite: 3618]</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4">
+                        Modular Homes, Intelligently Integrated
+                    </h2>
+                    <p class="text-lg text-gray-700">
+                        Our solution is a two-part innovation: high-quality physical housing combined with a proprietary digital infrastructure.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    
+                    <div class="bg-brand-gray p-8 rounded-xl shadow-lg">
+                        <img src="https://images.pexels.com/photos/2092906/pexels-photo-2092906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                             alt="Expandable container home"
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md"
+                             onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Expandable+Container+Home'; this.onerror=null;">
+                        <h3 class="text-2xl font-bold text-brand-blue mb-4">
+                            Rapid, Cost-Effective, and Durable Housing
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            [cite_start]We partner with leading Asian manufacturers to source high-quality, cost-effective expandable container homes[cite: 4, 3970]. These state-of-the-art units are durable, weather-resistant, and designed for modern living. [cite_start]By optimizing the supply chain and assembly process, our model reduces overall project costs by <span class="font-bold text-brand-accent">20-30%</span> and shortens project timelines by up to <span class="font-bold text-brand-accent">50%</span> compared to traditional construction[cite: 41].
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-blue text-white p-8 rounded-xl shadow-lg">
+                         <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                             alt="Smart Town technology diagram"
+                             class="w-full h-64 object-cover rounded-lg mb-6 shadow-md opacity-90"
+                             onerror="this.src='https://placehold.co/600x400/0a2a4b/ffffff?text=Smart+Town+Tech+Diagram'; this.onerror=null;">
+                        <h3 class="text-2xl font-bold text-white mb-4">
+                            Smart Town as a Service: Our Key Differentiator
+                        </h3>
+                        <p class="text-gray-200 leading-relaxed mb-6">
+                            This is our unique value proposition. [cite_start]We go beyond basic assembly by integrating a proprietary technology layer into every community we build[cite: 4, 10]. [cite_start]This "Smart Town as a Service" model ensures safety, connectivity, and sustainability for all residents[cite: 10, 81].
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-accent flex-shrink-0 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                <div>
+                                    <strong class="block">Advanced Security</strong>
+                                    [cite_start]<span>A network of 4K surveillance cameras with AI-powered analytics, thermal imaging, and 'Unusual Activity Detection' for robust perimeter security[cite: 196, 197, 3628].</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-accent flex-shrink-0 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 12.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 0V12a2 2 0 1 1 4 0v.5a.5.5 0 1 1-1 0V12a1 1 0 1 0-2 0v.5a.5.5 0 1 1-1 0zM5 10.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 0V10a5 5 0 1 1 10 0v.5a.5.5 0 1 1-1 0V10a4 4 0 1 0-8 0v.5a.5.5 0 1 1-1 0zM12 15a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path></svg>
+                                <div>
+                                    <strong class="block">Community Connectivity</strong>
+                                    [cite_start]<span>A robust 'hub-and-spoke' mesh Wi-Fi network, providing seamless high-speed internet access to every residence and all public spaces[cite: 200, 201].</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-accent flex-shrink-0 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                <div>
+                                    <strong class="block">Smart Utility Management</strong>
+                                    [cite_start]<span>An off-grid solar microgrid with battery storage, plus smart water and electricity meters for real-time monitoring, leak detection, and resource efficiency[cite: 204, 205, 207].</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="market" class="py-20 md:py-32 bg-brand-gray">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4">
+                        A Multi-Billion Dollar Market Driven by Urgent Need
+                    </h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        The demand for affordable, scalable housing solutions is critical. [cite_start]The global modular construction market is valued at over <span class="font-bold text-brand-blue">$104 billion</span> and is projected to exceed <span class="font-bold text-brand-blue">$140 billion</span> by <span class="font-bold text-brand-blue">2029</span>[cite: 6, 24].
+                    </p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/World_map_with_continents_tilted.svg/1280px-World_map_with_continents_tilted.svg.png" 
+                             alt="World map showing target markets in Africa, South America, and Southeast Asia"
+                             class="w-full rounded-lg shadow-md"
+                             onerror="this.src='https://placehold.co/800x500/cccccc/777777?text=World+Map+Highlighting+Target+Markets'; this.onerror=null;">
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-accent">
+                            <h4 class="text-xl font-bold text-brand-blue mb-2">Africa</h4>
+                            [cite_start]<p class="text-gray-700">Africa's urban population is expected to nearly triple by 2050, creating unprecedented demand for housing[cite: 27].</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-accent">
+                            <h4 class="text-xl font-bold text-brand-blue mb-2">South America</h4>
+                            [cite_start]<p class="text-gray-700">A severe housing deficit that exceeds 5.8 million units in Brazil alone[cite: 28].</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-brand-accent">
+                            <h4 class="text-xl font-bold text-brand-blue mb-2">Southeast Asia</h4>
+                            [cite_start]<p class="text-gray-700">Urgent need for affordable housing to accommodate rapid urbanization, with a backlog of over 12.7 million units in Indonesia alone[cite: 30].</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4">
+                        From Factory to Foundation
+                    </h2>
+                    <p class="text-lg text-gray-700">
+                        [cite_start]We manage the entire logistics chain to ensure a seamless, end-to-end delivery of our communities, even in the most remote locations[cite: 91, 4003].
+                    </p>
+                </div>
+
+                <div class="relative">
+                    <div class="hidden md:block absolute left-1/2 -ml-px w-0.5 h-full bg-brand-accent/30" style="height: calc(100% - 4rem); top: 2rem;"></div>
+
+                    <div class="space-y-12 md:space-y-16">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-8 md:text-right">
+                                <div class="bg-brand-accent text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 md:ml-auto md:mr-0 mx-auto relative z-10">1</div>
+                                <h4 class="text-2xl font-bold text-brand-blue mb-2">Sourcing & Manufacturing</h4>
+                                [cite_start]<p class="text-gray-700">Partnering with top-tier suppliers for quality-assured modular units[cite: 95, 97].</p>
+                            </div>
+                            <div class="hidden md:block md:w-1/2 md:pl-8"></div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="hidden md:block md:w-1/2 md:pr-8"></div>
+                            <div class="md:w-1/2 md:pl-8">
+                                <div class="bg-brand-accent text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto md:mx-0 relative z-10">2</div>
+                                <h4 class="text-2xl font-bold text-brand-blue mb-2">Optimized Flat-Pack Shipping</h4>
+                                [cite_start]<p class="text-gray-700">Maximizing container space to reduce logistical costs by up to 70%[cite: 99, 100].</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-8 md:text-right">
+                                <div class="bg-brand-accent text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 md:ml-auto md:mr-0 mx-auto relative z-10">3</div>
+                                <h4 class="text-2xl font-bold text-brand-blue mb-2">Global Ocean Freight</h4>
+                                [cite_start]<p class="text-gray-700">Managing complex international shipping routes from port to port[cite: 102].</p>
+                            </div>
+                            <div class="hidden md:block md:w-1/2 md:pl-8"></div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="hidden md:block md:w-1/2 md:pr-8"></div>
+                            <div class="md:w-1/2 md:pl-8">
+                                <div class="bg-brand-accent text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto md:mx-0 relative z-10">4</div>
+                                <h4 class="text-2xl font-bold text-brand-blue mb-2">Customs & Port Navigation</h4>
+                                [cite_start]<p class="text-gray-700">Expert handling of all import duties, tariffs, and port regulations[cite: 104, 105].</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-8 md:text-right">
+                                <div class="bg-brand-accent text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 md:ml-auto md:mr-0 mx-auto relative z-10">5</div>
+                                <h4 class="text-2xl font-bold text-brand-blue mb-2">Last-Mile Trucking to Rural Sites</h4>
+                                [cite_start]<p class="text-gray-700">Coordinating complex inland heavy-haul transport to remote locations[cite: 106, 107].</p>
+                            </div>
+                            <div class="hidden md:block md:w-1/2 md:pl-8"></div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="hidden md:block md:w-1/2 md:pr-8"></div>
+                            <div class="md:w-1/2 md:pl-8">
+                                <div class="bg-brand-accent text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto md:mx-0 relative z-10">6</div>
+                                <h4 class="text-2xl font-bold text-brand-blue mb-2">On-Site Assembly & Installation</h4>
+                                [cite_start]<p class="text-gray-700">Rapid, efficient construction and utility hookup by our skilled teams[cite: 108, 4022].</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-8 md:text-right">
+                                <div class="bg-brand-accent text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 md:ml-auto md:mr-0 mx-auto relative z-10">7</div>
+                                <h4 class="text-2xl font-bold text-brand-blue mb-2">Technology Integration & Handover</h4>
+                                [cite_start]<p class="text-gray-700">Implementing the "Smart Town" layer and delivering a turnkey community[cite: 4034].</p>
+                            </div>
+                            <div class="hidden md:block md:w-1/2 md:pl-8"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="partner" class="py-20 md:py-32 bg-brand-gray">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4">
+                        Partner With Us to Build the Future
+                    </h2>
+                    <p class="text-lg text-gray-700">
+                        We are actively seeking strategic partners to accelerate our mission. We have opportunities for manufacturers, investors, and public sector organizations.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <svg class="w-12 h-12 text-brand-accent mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <h3 class="text-2xl font-bold text-brand-blue mb-3">For Manufacturers</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            [cite_start]We are seeking forward-thinking manufacturing partners to create a reliable supply chain for high-quality, cost-effective modular homes[cite: 3998, 4004]. [cite_start]Partner with us to provide the physical solution for a global challenge[cite: 4045, 4050].
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <svg class="w-12 h-12 text-brand-accent mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                        <h3 class="text-2xl font-bold text-brand-blue mb-3">For Investors</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            [cite_start]Our venture offers a unique opportunity to generate both significant financial returns and measurable social impact[cite: 17, 3994]. [cite_start]We have viable funding models for every stage, from a 10-unit pilot project [cite: 15] [cite_start]to large-scale deployment, leveraging impact investing, VC, and project finance[cite: 234, 237, 241].
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <svg class="w-12 h-12 text-brand-accent mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        <h3 class="text-2xl font-bold text-brand-blue mb-3">For Governments & NGOs</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            [cite_start]Our 'Smart Town as a Service' model is the ideal solution for large-scale affordable housing initiatives[cite: 3979]. [cite_start]We deliver complete, managed, and secure communities, not just housing units—addressing critical concerns like security and resource management from day one[cite: 10, 82, 83].
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 md:py-32 bg-brand-blue text-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Get in Touch</h2>
+                        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                            We are actively seeking partners to help bring this vision to life. Whether you are a manufacturer, investor, government body, or NGO, we want to hear from you. Let's discuss how we can build the future of housing together.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 text-brand-accent mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                <a href="mailto:ernst@hatake.eu" class="text-lg hover:text-brand-accent transition-colors">ernst@hatake.eu</a>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 text-brand-accent mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                <p class="text-lg">
+                                    [cite_start]Our philosophy is detailed in <a href="http://amazon.com/Memoirs-Psych-Ward-Hatake-Hugo/dp/1967109087" target="_blank" rel="noopener noreferrer" class="font-semibold underline hover:text-brand-accent transition-colors">Memoirs from the Psych Ward</a>. [cite: 4027]
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-2xl">
+                        <form action="#" method="POST">
+                            <div class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                    <div class="mt-1">
+                                        <input type="text" name="name" id="name" autocomplete="name" class="block w-full px-4 py-3 rounded-md shadow-sm border-gray-300 focus:ring-brand-accent focus:border-brand-accent text-brand-dark" placeholder="Your Name">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                    <div class="mt-1">
+                                        <input type="email" name="email" id="email" autocomplete="email" class="block w-full px-4 py-3 rounded-md shadow-sm border-gray-300 focus:ring-brand-accent focus:border-brand-accent text-brand-dark" placeholder="you@example.com">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="organization" class="block text-sm font-medium text-gray-700">Organization (Optional)</label>
+                                    <div class="mt-1">
+                                        <input type="text" name="organization" id="organization" autocomplete="organization" class="block w-full px-4 py-3 rounded-md shadow-sm border-gray-300 focus:ring-brand-accent focus:border-brand-accent text-brand-dark" placeholder="Your Company / NGO">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                    <div class="mt-1">
+                                        <textarea id="message" name="message" rows="4" class="block w-full px-4 py-3 rounded-md shadow-sm border-gray-300 focus:ring-brand-accent focus:border-brand-accent text-brand-dark" placeholder="How can we help?"></textarea>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button type="submit" class="w-full flex justify-center py-3 px-6 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-brand-accent hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-accent transition-all duration-300">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-dark text-gray-400 py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <a href="#" class="text-2xl font-bold text-white">
+                        CT-Global<span class="text-brand-accent">.</span>
+                    </a>
+                    <p class="mt-4 text-gray-400 text-sm leading-relaxed">
+                        Our mission is to address the global housing crisis by deploying technologically advanced, affordable, and sustainable communities in rural and underserved areas.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#mission" class="hover:text-brand-accent transition-colors">Our Mission</a></li>
+                        <li><a href="#solution" class="hover:text-brand-accent transition-colors">Our Solution</a></li>
+                        <li><a href="#market" class="hover:text-brand-accent transition-colors">The Market</a></li>
+                        <li><a href="#process" class="hover:text-brand-accent transition-colors">Our Process</a></li>
+                        <li><a href="#partner" class="hover:text-brand-accent transition-colors">Partnerships</a></li>
+                        <li><a href="#contact" class="hover:text-brand-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-sm">
+                <p>&copy; 2025 CT-Global Modular Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Add script for nav links to close mobile menu on click
+        document.querySelectorAll('.mobile-nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
