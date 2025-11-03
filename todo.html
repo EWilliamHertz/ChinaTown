@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List - CT-Global Modular Solutions</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-blue': '#0a2a4b',
+                        'brand-dark': '#1a1a1a',
+                        'brand-accent': '#00a99d',
+                        'brand-gray': '#f4f7f6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-brand-dark">
+
+    <header class="bg-white/90 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-brand-blue">
+                    CT-Global<span class="text-brand-accent">.</span>
+                </a>
+                
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <ul class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <li><a href="mission.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Our Mission</a></li>
+                    <li><a href="solution.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Our Solution</a></li>
+                    <li><a href="market.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">The Market</a></li>
+                    <li><a href="process.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Our Process</a></li>
+                    <li><a href="partnerships.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Partnerships</a></li>
+                    <li><a href="planner.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Project Planner</a></li>
+                    <li><a href="documentation.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Documentation</a></li>
+                    <li><a href="todo.html" class="text-brand-accent font-semibold transition-colors duration-300">To-Do</a></li>
+                    <li><a href="journal.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Journal</a></li>
+                    <li>
+                        <a href="contact.html" class="bg-brand-accent text-white px-5 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all duration-300 shadow-md">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <ul class="flex flex-col space-y-2">
+                    <li><a href="mission.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Our Mission</a></li>
+                    <li><a href="solution.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Our Solution</a></li>
+                    <li><a href="market.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">The Market</a></li>
+                    <li><a href="process.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Our Process</a></li>
+                    <li><a href="partnerships.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Partnerships</a></li>
+                    <li><a href="planner.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Project Planner</a></li>
+                    <li><a href="documentation.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Documentation</a></li>
+                    <li><a href="todo.html" class="mobile-nav-link block py-2 px-3 rounded-md text-brand-accent font-semibold bg-gray-100">To-Do</a></li>
+                    <li><a href="journal.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Journal</a></li>
+                    <li>
+                        <a href="contact.html" class="mobile-nav-link block py-2 px-3 rounded-md bg-brand-accent text-white font-medium hover:bg-opacity-90 transition-all duration-300 shadow-md">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="py-20 bg-brand-gray min-h-screen">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
+                        Project To-Do List
+                    </h1>
+                    <p class="text-lg text-gray-700">
+                        Actionable tasks organized by category to refine the project budget and plan
+                    </p>
+                </div>
+
+                <!-- Modular Units Section -->
+                <div class="todo-section">
+                    <h3>B. Modular Units - Supplier Research</h3>
+                    <div class="space-y-3">
+                        <div class="todo-item priority-high">
+                            <strong>Task:</strong> Identify 5-10 top-rated manufacturers on Alibaba, Made-in-China, etc.
+                        </div>
+                        <div class="todo-item priority-high">
+                            <strong>Task:</strong> Get formal quotes for the "$1,900" and "$6,890" unit types
+                            <ul class="ml-6 mt-2 space-y-1">
+                                <li><strong>Data Needed:</strong> Price per unit (at 10, 50, 100 units)</li>
+                                <li><strong>Data Needed:</strong> Customization options and costs</li>
+                                <li><strong>Data Needed:</strong> Production lead time</li>
+                                <li><strong>Data Needed:</strong> Flat-pack shipping specs (how many units per 40ft container?)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logistics & Tariffs Section -->
+                <div class="todo-section">
+                    <h3>B. Logistics & Tariffs - Freight Research</h3>
+                    <div class="space-y-3">
+                        <div class="todo-item priority-high">
+                            <strong>Task:</strong> Research 3-5 freight forwarders (e.g., Basenton)
+                            <ul class="ml-6 mt-2 space-y-1">
+                                <li><strong>Data Needed:</strong> Cost for 40ft container: China → Mombasa (Kenya)</li>
+                                <li><strong>Data Needed:</strong> Cost for 40ft container: China → Lagos (Nigeria)</li>
+                                <li><strong>Data Needed:</strong> Cost for 40ft container: China → Durrës (Albania)</li>
+                            </ul>
+                        </div>
+                        <div class="todo-item priority-high">
+                            <strong>Task:</strong> Research import duties for "prefabricated buildings" in all 3 target countries
+                        </div>
+                        <div class="todo-item priority-medium">
+                            <strong>Task:</strong> Identify local heavy-haul trucking companies near target ports
+                            <ul class="ml-6 mt-2 space-y-1">
+                                <li><strong>Data Needed:</strong> Get quote for 100km inland heavy-haul</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4K Surveillance System Section -->
+                <div class="todo-section">
+                    <h3>C. 4K Surveillance System - Security Equipment</h3>
+                    <div class="space-y-3">
+                        <div class="todo-item priority-high">
+                            <strong>Task:</strong> Research bulk suppliers for 4K PoE cameras and NVRs
+                            <ul class="ml-6 mt-2 space-y-1">
+                                <li><strong>Suppliers:</strong> Avigilon, Axis, Dahua, Hikvision</li>
+                                <li><strong>Data Needed:</strong> Price per 8-camera 4K NVR kit</li>
+                                <li><strong>Data Needed:</strong> Price for 1000m spool of outdoor CAT6 cable</li>
+                                <li><strong>Data Needed:</strong> Shipping costs and import duties for electronics in target regions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Wi-Fi Section -->
+                <div class="todo-section">
+                    <h3>C. Community Wi-Fi - Network Infrastructure</h3>
+                    <div class="space-y-3">
+                        <div class="todo-item priority-medium">
+                            <strong>Task:</strong> Research commercial outdoor mesh systems
+                            <ul class="ml-6 mt-2 space-y-1">
+                                <li><strong>Suppliers:</strong> Calix, Eero, TP-Link (Deco), Netgear (Orbi)</li>
+                                <li><strong>Data Needed:</strong> Price for 1x outdoor "hub" unit</li>
+                                <li><strong>Data Needed:</strong> Price for 10x 2-pack in-home "spoke" units</li>
+                                <li><strong>Data Needed:</strong> ISP/Satellite internet setup and monthly costs in rural Kenya/Nigeria/Albania</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smart Utilities Section -->
+                <div class="todo-section">
+                    <h3>C. Smart Utilities - Energy & Water Management</h3>
+                    <div class="space-y-3">
+                        <div class="todo-item priority-high">
+                            <strong>Task:</strong> Research off-grid solar microgrid providers
+                            <ul class="ml-6 mt-2 space-y-1">
+                                <li><strong>Suppliers:</strong> Tesla (Powerwall), or alternatives</li>
+                                <li><strong>Data Needed:</strong> Get quote for a system to power 10 homes (est. 30-50kW solar + 100kWh battery)</li>
+                            </ul>
+                        </div>
+                        <div class="todo-item priority-medium">
+                            <strong>Task:</strong> Research smart water & electric meters
+                            <ul class="ml-6 mt-2 space-y-1">
+                                <li><strong>Suppliers:</strong> Bluebot, Neptune, etc.</li>
+                                <li><strong>Data Needed:</strong> Price per smart water meter (x10)</li>
+                                <li><strong>Data Needed:</strong> Price per smart electric meter (x10)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legal & Permits Section -->
+                <div class="todo-section">
+                    <h3>D. Legal & Permits - Regulatory Compliance</h3>
+                    <div class="space-y-3">
+                        <div class="todo-item priority-high">
+                            <strong>Task:</strong> Identify 3 local architectural/engineering firms in each target region
+                        </div>
+                        <div class="todo-item priority-high">
+                            <strong>Task:</strong> Research official government sites for:
+                            <ul class="ml-6 mt-2 space-y-1">
+                                <li>Building Permit ("Alvará") process (Brazil)</li>
+                                <li>NCA registration process (Kenya)</li>
+                                <li>Building Permit (PD 1096) process (Philippines - for future)</li>
+                            </ul>
+                        </div>
+                        <div class="todo-item priority-medium">
+                            <strong>Data Needed:</strong> Estimated cost for an Environmental Impact Assessment (EIA) in Kenya
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Website & Documentation Section -->
+                <div class="todo-section">
+                    <h3>Website & Documentation Updates</h3>
+                    <div class="space-y-3">
+                        <div class="todo-item completed">
+                            <strong>Task:</strong> Remove all citations from website content
+                        </div>
+                        <div class="todo-item completed">
+                            <strong>Task:</strong> Split website into separate HTML pages
+                        </div>
+                        <div class="todo-item completed">
+                            <strong>Task:</strong> Create CSS and JS folders
+                        </div>
+                        <div class="todo-item completed">
+                            <strong>Task:</strong> Add product images to website
+                        </div>
+                        <div class="todo-item completed">
+                            <strong>Task:</strong> Create documentation section with downloadable business plan
+                        </div>
+                        <div class="todo-item">
+                            <strong>Task:</strong> Update product images with actual unit photos
+                        </div>
+                        <div class="todo-item">
+                            <strong>Task:</strong> Add more detailed specifications for each unit type
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">CT-Global<span class="text-brand-accent">.</span></h3>
+                    <p class="text-gray-400">
+                        Our mission is to address the global housing crisis by deploying technologically advanced, affordable, and sustainable communities in rural and underserved areas.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="mission.html" class="text-gray-400 hover:text-brand-accent transition-colors">Our Mission</a></li>
+                        <li><a href="solution.html" class="text-gray-400 hover:text-brand-accent transition-colors">Our Solution</a></li>
+                        <li><a href="market.html" class="text-gray-400 hover:text-brand-accent transition-colors">The Market</a></li>
+                        <li><a href="process.html" class="text-gray-400 hover:text-brand-accent transition-colors">Our Process</a></li>
+                        <li><a href="partnerships.html" class="text-gray-400 hover:text-brand-accent transition-colors">Partnerships</a></li>
+                        <li><a href="planner.html" class="text-gray-400 hover:text-brand-accent transition-colors">Project Planner</a></li>
+                        <li><a href="documentation.html" class="text-gray-400 hover:text-brand-accent transition-colors">Documentation</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-brand-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-brand-accent transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-accent transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 CT-Global Modular Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

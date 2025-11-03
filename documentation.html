@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - CT-Global Modular Solutions</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-blue': '#0a2a4b',
+                        'brand-dark': '#1a1a1a',
+                        'brand-accent': '#00a99d',
+                        'brand-gray': '#f4f7f6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-brand-dark">
+
+    <header class="bg-white/90 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-brand-blue">
+                    CT-Global<span class="text-brand-accent">.</span>
+                </a>
+                
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <ul class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <li><a href="mission.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Our Mission</a></li>
+                    <li><a href="solution.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Our Solution</a></li>
+                    <li><a href="market.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">The Market</a></li>
+                    <li><a href="process.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Our Process</a></li>
+                    <li><a href="partnerships.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Partnerships</a></li>
+                    <li><a href="planner.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Project Planner</a></li>
+                    <li><a href="documentation.html" class="text-brand-accent font-semibold transition-colors duration-300">Documentation</a></li>
+                    <li><a href="todo.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">To-Do</a></li>
+                    <li><a href="journal.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Journal</a></li>
+                    <li>
+                        <a href="contact.html" class="bg-brand-accent text-white px-5 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all duration-300 shadow-md">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <ul class="flex flex-col space-y-2">
+                    <li><a href="mission.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Our Mission</a></li>
+                    <li><a href="solution.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Our Solution</a></li>
+                    <li><a href="market.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">The Market</a></li>
+                    <li><a href="process.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Our Process</a></li>
+                    <li><a href="partnerships.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Partnerships</a></li>
+                    <li><a href="planner.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Project Planner</a></li>
+                    <li><a href="documentation.html" class="mobile-nav-link block py-2 px-3 rounded-md text-brand-accent font-semibold bg-gray-100">Documentation</a></li>
+                    <li><a href="todo.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">To-Do</a></li>
+                    <li><a href="journal.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Journal</a></li>
+                    <li>
+                        <a href="contact.html" class="mobile-nav-link block py-2 px-3 rounded-md bg-brand-accent text-white font-medium hover:bg-opacity-90 transition-all duration-300 shadow-md">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="py-20 bg-brand-gray min-h-screen">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-brand-blue mb-4">
+                        Documentation
+                    </h1>
+                    <p class="text-lg text-gray-700">
+                        Download comprehensive research and planning documents for the CT-Global project
+                    </p>
+                </div>
+
+                <!-- Business Plan Research Document -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <svg class="w-16 h-16 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-brand-blue mb-3">
+                                Modular Housing Business Plan Research
+                            </h3>
+                            <p class="text-gray-700 mb-4 leading-relaxed">
+                                Comprehensive market analysis and strategic blueprint for modular smart community development. This 31-page document covers:
+                            </p>
+                            <ul class="list-disc ml-6 mb-6 space-y-2 text-gray-700">
+                                <li><strong>Executive Summary:</strong> Overview of the $104B+ global modular construction market opportunity</li>
+                                <li><strong>Market Analysis:</strong> Detailed examination of target regions (Africa, South America, Southeast Asia)</li>
+                                <li><strong>Competitive Landscape:</strong> Analysis of key competitors and strategic positioning</li>
+                                <li><strong>Business Models:</strong> B2G, B2B, and B2B2C approaches for different market segments</li>
+                                <li><strong>Financial Strategy:</strong> Funding models from pilot projects to large-scale deployment</li>
+                                <li><strong>Operational Framework:</strong> Logistics, regulatory considerations, and implementation roadmap</li>
+                            </ul>
+                            <a href="docs/ModularHousingBusinessPlanResearch.doc" download class="inline-flex items-center bg-brand-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-md">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                Download Business Plan Research (DOC)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message to Producers Document -->
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <svg class="w-16 h-16 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-brand-blue mb-3">
+                                Message to Producers
+                            </h3>
+                            <p class="text-gray-700 mb-4 leading-relaxed">
+                                Business proposal for global partnership opportunities with manufacturing and supply partners. This document outlines:
+                            </p>
+                            <ul class="list-disc ml-6 mb-6 space-y-2 text-gray-700">
+                                <li><strong>Partnership Opportunity:</strong> Collaboration model for scalable modular housing solutions</li>
+                                <li><strong>Market Need:</strong> Global demand for rapid, affordable housing in rural areas</li>
+                                <li><strong>CT-Modular Homes Solution:</strong> Integrated product and service offering</li>
+                                <li><strong>Management Philosophy:</strong> "Lego-like" deployment strategy and Smart Town integration</li>
+                                <li><strong>Partnership Model:</strong> Roles, responsibilities, and collaboration framework</li>
+                                <li><strong>Next Steps:</strong> Path forward for potential manufacturing partners</li>
+                            </ul>
+                            <a href="docs/MessageToProducers.doc" download class="inline-flex items-center bg-brand-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-md">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                Download Message to Producers (DOC)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Resources Section -->
+                <div class="bg-blue-50 border-l-4 border-brand-blue p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold text-brand-blue mb-4">Additional Resources</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-brand-blue mb-2">Product Images</h4>
+                            <p class="text-gray-700 mb-2">View the modular unit options:</p>
+                            <ul class="list-disc ml-6 space-y-1 text-gray-700">
+                                <li><a href="images/unit_1900_option.webp" target="_blank" class="text-brand-accent hover:underline">$1,900 Expandable Foldable Unit</a></li>
+                                <li><a href="images/unit_6890_option_floorplan.webp" target="_blank" class="text-brand-accent hover:underline">$6,890 Unit - Floor Plan</a></li>
+                                <li><a href="images/unit_6890_option_interior.webp" target="_blank" class="text-brand-accent hover:underline">$6,890 Unit - Interior Rendering</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-blue mb-2">Reference Materials</h4>
+                            <p class="text-gray-700">
+                                The CT-China Town concept and management philosophy is detailed in <strong>Memoirs from the Psych Ward</strong> by Hatake Hugo, available on <a href="http://amazon.com/Memoirs-Psych-Ward-Hatake-Hugo/dp/1967109087" target="_blank" class="text-brand-accent hover:underline">Amazon</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">CT-Global<span class="text-brand-accent">.</span></h3>
+                    <p class="text-gray-400">
+                        Our mission is to address the global housing crisis by deploying technologically advanced, affordable, and sustainable communities in rural and underserved areas.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="mission.html" class="text-gray-400 hover:text-brand-accent transition-colors">Our Mission</a></li>
+                        <li><a href="solution.html" class="text-gray-400 hover:text-brand-accent transition-colors">Our Solution</a></li>
+                        <li><a href="market.html" class="text-gray-400 hover:text-brand-accent transition-colors">The Market</a></li>
+                        <li><a href="process.html" class="text-gray-400 hover:text-brand-accent transition-colors">Our Process</a></li>
+                        <li><a href="partnerships.html" class="text-gray-400 hover:text-brand-accent transition-colors">Partnerships</a></li>
+                        <li><a href="planner.html" class="text-gray-400 hover:text-brand-accent transition-colors">Project Planner</a></li>
+                        <li><a href="documentation.html" class="text-gray-400 hover:text-brand-accent transition-colors">Documentation</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-brand-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-brand-accent transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-accent transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 CT-Global Modular Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

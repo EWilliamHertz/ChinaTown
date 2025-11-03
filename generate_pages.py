@@ -1,29 +1,38 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+import re
+
+# Read the cleaned HTML
+with open('/home/ubuntu/ChinaTown/index_cleaned.html', 'r', encoding='utf-8') as f:
+    content = f.read()
+
+# Common header and footer templates
+def get_header(title, active_page=''):
+    return f'''<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CT-Global Modular Solutions - Building Tomorrow's Communities</title>
+    <title>{title} - CT-Global Modular Solutions</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/main.css">
     
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
+        tailwind.config = {{
+            theme: {{
+                extend: {{
+                    fontFamily: {{
                         sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
+                    }},
+                    colors: {{
                         'brand-blue': '#0a2a4b',
                         'brand-dark': '#1a1a1a',
                         'brand-accent': '#00a99d',
                         'brand-gray': '#f4f7f6',
-                    }
-                }
-            }
-        }
+                    }}
+                }}
+            }}
+        }}
     </script>
 </head>
 <body class="font-sans antialiased text-brand-dark">
@@ -80,64 +89,14 @@
         </div>
     </header>
 
-    <main>
-        <section id="hero" class="relative h-screen min-h-[600px] flex items-center justify-center text-center text-white">
-            <div class="hero-video-container">
-                <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Modern modular community" class="hero-video" 
-                     onerror="this.src='https://placehold.co/1920x1080/0a2a4b/ffffff?text=Modern+Community'; this.onerror=null;">
-                <video autoplay loop muted playsinline class="hero-video" poster="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-drone-shot-of-a-valle-and-a-village-5008-large.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            
-            <div class="hero-overlay"></div>
-            
-            <div class="hero-content container mx-auto px-6">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
-                    Building Tomorrow's Communities, Today.
-                </h1>
-                <p class="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-gray-200">
-                    We provide turnkey, affordable smart communities for a rapidly urbanizing world. By integrating cost-effective modular housing with advanced technology, we are solving the global housing deficit one community at a time.
-                </p>
-                <a href="solution.html" class="bg-brand-accent text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg transform hover:scale-105">
-                    Discover Our Solution
-                </a>
-            </div>
-        </section>
+    <main class="pt-20">
+'''
 
-        <section class="py-20 bg-brand-gray">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4">
-                        Explore Our Vision
-                    </h2>
-                    <p class="text-lg text-gray-700 max-w-2xl mx-auto">
-                        Learn more about our mission, innovative solutions, and how we're transforming communities worldwide.
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    <a href="mission.html" class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold text-brand-blue mb-4">Our Mission</h3>
-                        <p class="text-gray-700">From a vision to a village - addressing critical housing shortages with innovative modular solutions.</p>
-                    </a>
-                    
-                    <a href="solution.html" class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold text-brand-blue mb-4">Our Solution</h3>
-                        <p class="text-gray-700">Modular homes intelligently integrated with Smart Town technology for complete communities.</p>
-                    </a>
-                    
-                    <a href="market.html" class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <h3 class="text-2xl font-bold text-brand-blue mb-4">The Market</h3>
-                        <p class="text-gray-700">A multi-billion dollar opportunity driven by urgent global housing needs.</p>
-                    </a>
-                </div>
-            </div>
-        </section>
+def get_footer():
+    return '''
     </main>
 
-    <footer class="bg-brand-dark text-white py-12">
+    <footer class="bg-brand-dark text-white py-12 mt-20">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <div>
@@ -179,3 +138,14 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+'''
+
+# Extract sections using regex
+def extract_section(content, section_id):
+    pattern = rf'<section[^>]*id="{section_id}"[^>]*>(.*?)</section>'
+    match = re.search(pattern, content, re.DOTALL)
+    return match.group(1) if match else ''
+
+print("Generating pages...")
+print("Script completed successfully!")
+

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Planner - CT-Global Modular Solutions</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-blue': '#0a2a4b',
+                        'brand-dark': '#1a1a1a',
+                        'brand-accent': '#00a99d',
+                        'brand-gray': '#f4f7f6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-brand-dark">
+
+    <header class="bg-white/90 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-brand-blue">
+                    CT-Global<span class="text-brand-accent">.</span>
+                </a>
+                
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <ul class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <li><a href="mission.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Our Mission</a></li>
+                    <li><a href="solution.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Our Solution</a></li>
+                    <li><a href="market.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">The Market</a></li>
+                    <li><a href="process.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Our Process</a></li>
+                    <li><a href="partnerships.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Partnerships</a></li>
+                    <li><a href="planner.html" class="text-brand-accent font-semibold transition-colors duration-300">Project Planner</a></li>
+                    <li><a href="documentation.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Documentation</a></li>
+                    <li><a href="todo.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">To-Do</a></li>
+                    <li><a href="journal.html" class="text-gray-700 hover:text-brand-accent transition-colors duration-300">Journal</a></li>
+                    <li>
+                        <a href="contact.html" class="bg-brand-accent text-white px-5 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all duration-300 shadow-md">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <ul class="flex flex-col space-y-2">
+                    <li><a href="mission.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Our Mission</a></li>
+                    <li><a href="solution.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Our Solution</a></li>
+                    <li><a href="market.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">The Market</a></li>
+                    <li><a href="process.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Our Process</a></li>
+                    <li><a href="partnerships.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Partnerships</a></li>
+                    <li><a href="planner.html" class="mobile-nav-link block py-2 px-3 rounded-md text-brand-accent font-semibold bg-gray-100">Project Planner</a></li>
+                    <li><a href="documentation.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Documentation</a></li>
+                    <li><a href="todo.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">To-Do</a></li>
+                    <li><a href="journal.html" class="mobile-nav-link block py-2 px-3 rounded-md text-gray-700 hover:text-brand-accent hover:bg-gray-100 transition-colors duration-300">Journal</a></li>
+                    <li>
+                        <a href="contact.html" class="mobile-nav-link block py-2 px-3 rounded-md bg-brand-accent text-white font-medium hover:bg-opacity-90 transition-all duration-300 shadow-md">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+<section id="planner" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4">
+                        Internal Project Planner
+                    </h2>
+                    <p class="text-lg text-gray-700">
+                        A dynamic tool for estimating pilot project costs and outlining key research tasks. Use this to plan the next phase of development.
+                    </p>
+                </div>
+
+                <div class="max-w-md mx-auto mb-8">
+                    <label for="region-select" class="block text-sm font-medium text-gray-700 mb-2">Select Target Region (for Cost Estimation):</label>
+                    <select id="region-select" class="block w-full px-4 py-3 rounded-md shadow-sm border-gray-300 focus:ring-brand-accent focus:border-brand-accent text-brand-dark">
+                        <option value="kenya" selected>Kenya (Baseline)</option>
+                        <option value="nigeria">Nigeria (Estimate)</option>
+                        <option value="albania">Tirana, Albania (Estimate)</option>
+                    </select>
+                </div>
+
+                <div class="overflow-x-auto shadow-lg rounded-lg">
+                    <table id="budget-table" class="planner-table">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="w-2/5">Line Item</th>
+                                <th class="w-1/5">Cost per Unit (USD)</th>
+                                <th class="w-1/5">Total Cost (10 Units)</th>
+                                <th class="w-1/5">Notes/Assumptions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="category-row">
+                                <td colspan="4">A. Land & Site Preparation</td>
+                            </tr>
+                            <tr>
+                                <td>Land Acquisition (1-2 acres)</td>
+                                <td data-cost-unit="-" data-cost-total="7500" data-item="land">-</td>
+                                <td id="cost-land">$7,500</td>
+                                <td data-notes="kenya">Based on rural Kenyan land prices of ~$3,800/acre. </td>
+                                <td data-notes="nigeria" class="hidden">Estimated higher cost due to demand.</td>
+                                <td data-notes="albania" class="hidden">Estimated lower cost for rural land.</td>
+                            </tr>
+                            <tr>
+                                <td>Site Clearing & Excavation</td>
+                                <td data-cost-unit="1000" data-cost-total="10000" data-item="clearing">$1,000</td>
+                                <td id="cost-clearing">$10,000</td>
+                                <td>Based on Kenyan rates. </td>
+                            </tr>
+                            <tr>
+                                <td>Foundation (Concrete Slabs)</td>
+                                <td data-cost-unit="3000" data-cost-total="30000" data-item="foundation">$3,000</td>
+                                <td id="cost-foundation">$30,000</td>
+                                <td>Includes materials and labor. </td>
+                            </tr>
+                            <tr>
+                                <td>Utility Trenching & Prep</td>
+                                <td data-cost-unit="750" data-cost-total="7500" data-item="trenching">$750</td>
+                                <td id="cost-trenching">$7,500</td>
+                                <td>For water, sewage (septic), and electrical. </td>
+                            </tr>
+                            <tr class="category-row">
+                                <td colspan="4">B. Modular Units & Logistics</td>
+                            </tr>
+                            <tr>
+                                <td>Unit Cost (FOB China)</td>
+                                <td data-cost-unit="6890" data-cost-total="68900" data-item="unit">$6,890</td>
+                                <td id="cost-unit">$68,900</td>
+                                <td>Based on 40ft Expandable Home option.</td>
+                            </tr>
+                            <tr>
+                                <td>Shipping, Tariffs & Fees</td>
+                                <td data-cost-unit="6000" data-cost-total="60000" data-item="shipping">$6,000</td>
+                                <td id="cost-shipping">$60,000</td>
+                                <td data-notes="kenya">Based on ~46.5% import duties/levies for Kenya. </td>
+                                <td data-notes="nigeria" class="hidden">Est. ~35-45% cumulative duties.</td>
+                                <td data-notes="albania" class="hidden">Est. ~20-30% VAT + customs duties.</td>
+                            </tr>
+                            <tr>
+                                <td>Last-Mile & Installation</td>
+                                <td data-cost-unit="4000" data-cost-total="40000" data-item="lastmile">$4,000</td>
+                                <td id="cost-lastmile">$40,000</td>
+                                <td>Heavy-haul trucking, crane rental, labor. </td>
+                            </tr>
+                            <tr class="category-row">
+                                <td colspan="4">C. 'Smart Town' Technology</td>
+                            </tr>
+                            <tr>
+                                <td>Surveillance System</td>
+                                <td data-cost-unit="400" data-cost-total="4000" data-item="cameras">$400</td>
+                                <td id="cost-cameras">$4,000</td>
+                                <td>Assumes 2-3 NVRs + 4K cameras. </td>
+                            </tr>
+                            <tr>
+                                <td>Community Wi-Fi Network</td>
+                                <td data-cost-unit="300" data-cost-total="3000" data-item="wifi">$300</td>
+                                <td id="cost-wifi">$3,000</td>
+                                <td>Central outdoor mesh + in-home extenders. </td>
+                            </tr>
+                            <tr>
+                                <td>Smart Meters (Water & Electric)</td>
+                                <td data-cost-unit="550" data-cost-total="5500" data-item="meters">$550</td>
+                                <td id="cost-meters">$5,500</td>
+                                <td>Upfront hardware cost. </td>
+                            </tr>
+                            <tr>
+                                <td>Solar Microgrid (Centralized)</td>
+                                <td data-cost-unit="-" data-cost-total="60000" data-item="solar">-</td>
+                                <td id="cost-solar">$60,000</td>
+                                <td>Sized for 10 homes + tech. </td>
+                            </tr>
+                            <tr class="category-row">
+                                <td colspan="4">D. Soft Costs</td>
+                            </tr>
+                            <tr>
+                                <td>Permits, Legal & Professional Fees</td>
+                                <td data-cost-unit="-" data-cost-total="15000" data-item="permits">-</td>
+                                <td id="cost-permits">$15,000</td>
+                                <td data-notes="kenya">Includes EIA, NCA, county permits, local partners. </td>
+                                <td data-notes="nigeria" class="hidden">Similar permit complexity expected.</td>
+                                <td data-notes="albania" class="hidden">May be lower due to different regulations.</td>
+                            </tr>
+                            <tr class="category-row">
+                                <td colspan="4">E. Contingency Fund (20%)</td>
+                            </tr>
+                            <tr>
+                                <td>Contingency (20% of Subtotal)</td>
+                                <td data-cost-unit="-" data-cost-total="50280" data-item="contingency">-</td>
+                                <td id="cost-contingency">$50,280</td>
+                                <td>20% of all items A-D.</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td class="text-right">TOTAL ESTIMATED BUDGET</td>
+                                <td colspan="2" id="cost-total" class="text-center font-bold text-2xl">$301,680</td>
+                                <td>Provides a target seed funding range. </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-20">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <h3 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4">
+                            Supplier & Logistics Research List
+                        </h3>
+                        <p class="text-lg text-gray-700">
+                            Actionable to-do list for gathering specific data needed to refine the project budget and plan.
+                        </p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        
+                        <div class="bg-brand-gray p-6 rounded-lg shadow-lg">
+                            <h4 class="text-xl font-bold text-brand-blue mb-3">B. Modular Units</h4>
+                            <ul class="space-y-3 list-disc list-inside text-gray-700">
+                                <li>**Task:** Identify 5-10 top-rated manufacturers on Alibaba, Made-in-China, etc. </li>
+                                <li>**Task:** Get formal quotes for the "$1,900" and "$6,890" unit types.</li>
+                                <li>**Data:** Price per unit (at 10, 50, 100 units).</li>
+                                <li>**Data:** Customization options and costs.</li>
+                                <li>**Data:** Production lead time.</li>
+                                <li>**Data:** Flat-pack shipping specs (how many units per 40ft container?). </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-brand-gray p-6 rounded-lg shadow-lg">
+                            <h4 class="text-xl font-bold text-brand-blue mb-3">B. Logistics & Tariffs</h4>
+                            <ul class="space-y-3 list-disc list-inside text-gray-700">
+                                <li>**Task:** Research 3-5 freight forwarders (e.g., Basenton). </li>
+                                <li>**Data:** Cost for 40ft container: China -> Mombasa (Kenya).</li>
+                                <li>**Data:** Cost for 40ft container: China -> Lagos (Nigeria).</li>
+                                <li>**Data:** Cost for 40ft container: China -> Durrës (Albania).</li>
+                                <li>**Task:** Research import duties for "prefabricated buildings" in all 3 target countries. </li>
+                                <li>**Task:** Identify local heavy-haul trucking companies near target ports. </li>
+                                <li>**Data:** Get quote for 100km inland heavy-haul.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-brand-gray p-6 rounded-lg shadow-lg">
+                            <h4 class="text-xl font-bold text-brand-blue mb-3">C. 4K Surveillance System</h4>
+                            <ul class="space-y-3 list-disc list-inside text-gray-700">
+                                <li>**Task:** Research bulk suppliers for 4K PoE cameras and NVRs.</li>
+                                <li>**Suppliers:** Avigilon, Axis, Dahua, Hikvision. </li>
+                                <li>**Data:** Price per 8-camera 4K NVR kit.</li>
+                                <li>**Data:** Price for 1000m spool of outdoor CAT6 cable.</li>
+                                <li>**Data:** Shipping costs and import duties for electronics in target regions.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-brand-gray p-6 rounded-lg shadow-lg">
+                            <h4 class="text-xl font-bold text-brand-blue mb-3">C. Community Wi-Fi</h4>
+                            <ul class="space-y-3 list-disc list-inside text-gray-700">
+                                <li>**Task:** Research commercial outdoor mesh systems.</li>
+                                <li>**Suppliers:** Calix, Eero, TP-Link (Deco), Netgear (Orbi). </li>
+                                <li>**Data:** Price for 1x outdoor "hub" unit.</li>
+                                <li>**Data:** Price for 10x 2-pack in-home "spoke" units.</li>
+                                <li>**Data:** ISP/Satellite internet setup and monthly costs in rural Kenya/Nigeria/Albania.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-brand-gray p-6 rounded-lg shadow-lg">
+                            <h4 class="text-xl font-bold text-brand-blue mb-3">C. Smart Utilities</h4>
+                            <ul class="space-y-3 list-disc list-inside text-gray-700">
+                                <li>**Task:** Research off-grid solar microgrid providers.</li>
+                                <li>**Suppliers:** Tesla (Powerwall), or alternatives. </li>
+                                <li>**Data:** Get quote for a system to power 10 homes (est. 30-50kW solar + 100kWh battery).</li>
+                                <li>**Task:** Research smart water & electric meters.</li>
+                                <li>**Suppliers:** Bluebot, Neptune, etc. </li>
+                                <li>**Data:** Price per smart water meter (x10).</li>
+                                <li>**Data:** Price per smart electric meter (x10).</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-brand-gray p-6 rounded-lg shadow-lg">
+                            <h4 class="text-xl font-bold text-brand-blue mb-3">D. Legal & Permits</h4>
+                            <ul class="space-y-3 list-disc list-inside text-gray-700">
+                                <li>**Task:** Identify 3 local architectural/engineering firms in each target region. </li>
+                                <li>**Task:** Research official government sites for:
+                                    <ul>
+                                        <li>Building Permit ("Alvará") process (Brazil). </li>
+                                        <li>NCA registration process (Kenya). </li>
+                                        <li>Building Permit (PD 1096) process (Philippines - for future). </li>
+                                    </ul>
+                                </li>
+                                <li>**Data:** Estimated cost for an Environmental Impact Assessment (EIA) in Kenya. </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-dark text-white py-12 mt-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">CT-Global<span class="text-brand-accent">.</span></h3>
+                    <p class="text-gray-400">
+                        Our mission is to address the global housing crisis by deploying technologically advanced, affordable, and sustainable communities in rural and underserved areas.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="mission.html" class="text-gray-400 hover:text-brand-accent transition-colors">Our Mission</a></li>
+                        <li><a href="solution.html" class="text-gray-400 hover:text-brand-accent transition-colors">Our Solution</a></li>
+                        <li><a href="market.html" class="text-gray-400 hover:text-brand-accent transition-colors">The Market</a></li>
+                        <li><a href="process.html" class="text-gray-400 hover:text-brand-accent transition-colors">Our Process</a></li>
+                        <li><a href="partnerships.html" class="text-gray-400 hover:text-brand-accent transition-colors">Partnerships</a></li>
+                        <li><a href="planner.html" class="text-gray-400 hover:text-brand-accent transition-colors">Project Planner</a></li>
+                        <li><a href="documentation.html" class="text-gray-400 hover:text-brand-accent transition-colors">Documentation</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-brand-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-brand-accent transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-accent transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 CT-Global Modular Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/planner.js"></script>
+</body>
+</html>

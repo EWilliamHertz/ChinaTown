@@ -1,0 +1,153 @@
+/* CT-Global Modular Solutions - Main Stylesheet */
+
+/* Hero Video Background */
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.hero-video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 42, 75, 0.7);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Planner Table Styling */
+.planner-table {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-collapse: collapse;
+}
+
+.planner-table th,
+.planner-table td {
+    border: 1px solid #d1d5db;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.planner-table th {
+    background-color: #f9fafb;
+}
+
+.planner-table .category-row {
+    background-color: #f3f4f6;
+    font-weight: bold;
+    color: #111827;
+}
+
+.planner-table .total-row {
+    background-color: #e5e7eb;
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+/* Journal Styles */
+.journal-entry {
+    background: white;
+    border-left: 4px solid #00a99d;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.journal-entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.journal-entry-date {
+    font-weight: 600;
+    color: #0a2a4b;
+}
+
+.journal-entry-content {
+    color: #374151;
+    line-height: 1.6;
+}
+
+/* Todo List Styles */
+.todo-section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.todo-section h3 {
+    color: #0a2a4b;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #00a99d;
+}
+
+.todo-item {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid #d1d5db;
+    background: #f9fafb;
+    border-radius: 0.25rem;
+}
+
+.todo-item.completed {
+    border-left-color: #00a99d;
+    background: #f0fdf4;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.todo-item.priority-high {
+    border-left-color: #ef4444;
+    background: #fef2f2;
+}
+
+.todo-item.priority-medium {
+    border-left-color: #f59e0b;
+    background: #fffbeb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .planner-table {
+        font-size: 0.875rem;
+    }
+    
+    .planner-table th,
+    .planner-table td {
+        padding: 0.5rem;
+    }
+}
